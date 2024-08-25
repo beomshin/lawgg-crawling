@@ -29,6 +29,14 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.17.2'
+//    // https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5
+//    implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.3.1'
+    // https://mvnrepository.com/artifact/org.springframework.retry/spring-retry
+    implementation group: 'org.springframework.retry', name: 'spring-retry', version: '2.0.7'
+
 }
 
 tasks.named('test') {
