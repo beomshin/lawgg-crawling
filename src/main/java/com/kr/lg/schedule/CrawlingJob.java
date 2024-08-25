@@ -23,7 +23,7 @@ public class CrawlingJob {
     private static int DC_MIN = 2000000;
     private static HashSet<Integer> DC_OVERLAP = new HashSet<>();
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 1000)
     public void crawl() throws IOException {
 
         var currentTime = LocalTime.now();
