@@ -38,7 +38,7 @@ public class CrawlingJob {
         }
         if (currentTime.equals(midnight)) DC_OVERLAP.clear();
 
-        for (int i=0; i < 2; i++) {
+        for (int i=0; i < 6; i++) {
             var no = random.nextInt(DC_MAX - DC_MIN + 1) + DC_MIN;
             var url = String.format("""
                 https://gall.dcinside.com/board/view/?id=leagueoflegends6&no=%s
