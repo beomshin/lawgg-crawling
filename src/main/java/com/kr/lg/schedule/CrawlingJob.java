@@ -23,7 +23,7 @@ public class CrawlingJob {
     private static int DC_MIN = 2000000;
     private static HashSet<Integer> DC_OVERLAP = new HashSet<>();
 
-    @Scheduled(fixedRate = 3000)
+    @Scheduled(fixedRate = 1000)
     public void crawl() throws IOException {
 
         var currentTime = LocalTime.now();
@@ -38,7 +38,7 @@ public class CrawlingJob {
         }
         if (currentTime.equals(midnight)) DC_OVERLAP.clear();
 
-        for (int i=0; i < 1; i++) {
+        for (int i=0; i < 5; i++) {
             var no = random.nextInt(DC_MAX - DC_MIN + 1) + DC_MIN;
             var url = String.format("""
                 https://gall.dcinside.com/board/view/?id=leagueoflegends6&no=%s
